@@ -1,0 +1,460 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Merriweather:ital,wght@1,300&family=Rubik+Dirt&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------------------------------------------*/
+/*font-family: 'Merriweather', serif; - header
+font-family: 'Cormorant Garamond', serif - main
+font-family: 'Rubik Dirt', cursive; - footer*/
+/*.big_item{
+  margin: 30px 5%;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid red;
+  //min-width: 100%;
+  .photo_descript{
+    //width: 300px;
+    //height: 300px;
+    display: flex;
+    border: 3px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5%;
+    .photo,.description{
+      border: 5px solid black;
+     // object-fit: fill;
+    }
+    .photo{
+      position: relative;
+      width: 800px;
+      height: 300px;
+
+      .photo1:hover{
+        transition-duration: 2s;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+      }
+    }
+    img{
+     // max-width: 100%;
+      //object-fit: contain;
+      //position: absolute;
+      //transform: translate(50px,50px);
+      top: 0;
+      left: 0;
+      object-fit:cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .description{
+      &:hover{
+        transform: scale(-1,1);
+      }
+  }.photo_descript2{
+
+  }.photo_descript3{
+
+  }
+}
+*/
+/*div {
+  height: 300px;
+  width: 400px;
+  font-size: 50px;
+  border: 3px solid darkred;
+  margin: 5% 15%;
+  padding: 30px;
+  //overflow: hidden;
+  p{
+    overflow-y: scroll;
+    border: 3px solid navy;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .content1{
+    padding: 20px;
+  }
+  .content2{
+    padding: 40px;
+  }
+}*/
+.wrapper {
+  border: 5px solid navy;
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(100px, 400px) 2fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: minmax(100px, 400px) 2fr 1fr/1fr;
+}
+.wrapper .header, .wrapper .main, .wrapper .footer {
+  border: 5px solid cadetblue;
+}
+.wrapper .header {
+  color: white;
+  /*position: relative;
+  .first__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: contain;
+  }*/
+  background: url("../img/kommerch-nedv.jpg") 0 0/cover no-repeat;
+}
+.wrapper .header .flexbox {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper .header .flexbox ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+.wrapper .header .flexbox ul li {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.wrapper .header .flexbox ul li a {
+  display: block;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.wrapper .header .flexbox ul li a:hover {
+  cursor: pointer;
+  color: orange;
+}
+.wrapper .header .flexbox .logo {
+  position: relative;
+  margin: 15px 0;
+  width: 70px;
+  height: 70px;
+}
+.wrapper .header .flexbox .logo .header__photo {
+  left: 0px;
+  top: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper .header .flexbox .title {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+}
+.wrapper .header .flexbox .description {
+  margin-top: 30px;
+  font-size: 25px;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+}
+.wrapper .main {
+  margin: 0% 7%;
+  border: 5px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper .main .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 3px solid navy;
+  margin: 0 5%;
+}
+.wrapper .main .icons .icons__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper .main .icons .icons__item .icons__icon, .wrapper .main .icons .icons__item .icons__advantage, .wrapper .main .icons .icons__item .icons__text, .wrapper .main .icons .icons__item .podr {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+}
+.wrapper .main .icons .icons__item .icons__icon {
+  max-height: 300px;
+  max-width: 300px;
+}
+.wrapper .main .icons .icons__item .icons__icon img {
+  /*width: 100px;
+  height: 100px;*/
+  width: 100%;
+  height: 100%;
+}
+.wrapper .main .icons .icons__item .icons__text {
+  margin-top: 15px;
+  font-weight: unset;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.wrapper .main .icons .icons__item .podr {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper .main .goods_and_services {
+  margin-top: 30px;
+  border: 3px solid gray;
+}
+.wrapper .main .goods_and_services .goods__title {
+  text-align: center;
+  font-size: 35px;
+  color: dodgerblue;
+  font-family: "Cormorant Garamond", serif;
+}
+.wrapper .main .goods_and_services .goods__description {
+  margin: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper .description__desc_image {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bolder;
+  width: 50%;
+  height: 400px;
+  font-size: 25px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper .description__desc_image .desc__text {
+  position: absolute;
+  max-height: 60%;
+  top: 0%;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper .description__desc_image .button {
+  position: absolute;
+  top: 76%;
+  font-size: 25px;
+  background-color: dodgerblue;
+  margin: 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  margin-left: 25%;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper .description__image {
+  position: relative;
+  width: 50%;
+  height: 400px;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper .description__image img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.wrapper .main .gallery {
+  border: 5px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper .main .gallery .gallery__title {
+  margin: 30px 0px;
+  font-size: 35px;
+  color: dodgerblue;
+  font-family: "Cormorant Garamond", serif;
+}
+.wrapper .main .gallery .gallery__photoes .main__photo__gallery {
+  width: 1200px;
+  height: 400px;
+  border: 5px solid red;
+}
+.wrapper .main .gallery .gallery__photoes .main__photo__gallery img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper .main .gallery .gallery__photoes .other__photoes {
+  margin-top: 20px;
+  width: 1100px;
+  height: 185px;
+  border: 3px solid black;
+  margin-left: 3.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+.wrapper .main .gallery .gallery__photoes .other__photoes div {
+  margin-right: 5px;
+  width: 185px;
+}
+.wrapper .main .gallery .gallery__photoes .other__photoes div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper .main .gallery .gallery__descript {
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  margin: 0 15%;
+}
+
+@media screen and (max-width: 1600px) {
+  .description__desc_image {
+    width: 10%;
+  }
+}
