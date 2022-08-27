@@ -452,6 +452,69 @@ font-family: 'Rubik Dirt', cursive; - footer*/
   text-align: center;
   margin: 0 15%;
 }
+.wrapper .main .contacts .contacts__cont {
+  margin: 30px 0px;
+  font-size: 35px;
+  color: dodgerblue;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+}
+.wrapper .main .contacts .wrapper__contacts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr/1fr 1fr;
+}
+.wrapper .main .contacts .wrapper__contacts .contacts__numbers {
+  font-size: 35px;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+}
+.wrapper .main .contacts .wrapper__contacts .contacts__numbers .telephone, .wrapper .main .contacts .wrapper__contacts .contacts__numbers .mail, .wrapper .main .contacts .wrapper__contacts .contacts__numbers .adress {
+  margin-top: 5%;
+}
+.wrapper .main .contacts .wrapper__contacts .forms {
+  margin-top: 30px;
+  margin-left: 20%;
+  font-size: 35px;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+}
+.wrapper .main .contacts .wrapper__contacts .forms .button__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+.wrapper .main .contacts .wrapper__contacts .forms .button__wrapper .button {
+  display: block;
+  font-size: 30px;
+}
+.wrapper .main .contacts .wrapper__contacts .forms ._form1 {
+  border: 5px solid black;
+  border-radius: 60px;
+  padding: 10px;
+}
+.wrapper .main .contacts .wrapper__contacts .forms ._form2 {
+  border: 5px solid black;
+  border-radius: 60px;
+  padding: 10px;
+}
+.wrapper .main .contacts .wrapper__contacts .forms ._form3 {
+  border: 5px solid black;
+  border-radius: 60px;
+  padding: 10px;
+}
+.wrapper .main .contacts .wrapper__contacts .forms .send {
+  border-radius: 60px;
+  padding: 10px;
+}
+.wrapper .main .contacts .wrapper__contacts .forms .clear {
+  margin-left: 80px;
+  border-radius: 60px;
+  padding: 10px;
+}
 
 @media screen and (max-width: 1600px) {
   .description__desc_image {
