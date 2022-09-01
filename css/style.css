@@ -266,15 +266,32 @@ h1, h2, h3, h4, h5, h6 {
       flex-wrap: nowrap;
 }
 .wrapper .main .goods_and_services .goods__description .some__wrapper .description__desc_image .desc__text {
-  position: absolute;
-  max-height: 60%;
-  top: 0%;
+  position: relative;
+  /*height: 350px;
+  width: 550px;*/
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper .description__desc_image .desc__text div {
+  font-size: 80%;
+}
+.wrapper .main .goods_and_services .goods__description .some__wrapper .description__desc_image .desc__text .div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: auto;
+  font-size: 15px;
 }
 .wrapper .main .goods_and_services .goods__description .some__wrapper .description__desc_image .button {
   margin-top: 5%;
-  position: absolute;
   top: 76%;
   font-size: 25px;
+  position: absolute;
+  left: 50%;
   background-color: dodgerblue;
   margin: 1%;
   /*justify-content: center;
@@ -303,7 +320,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .wrapper .main .gallery {
   display: -webkit-box;
@@ -441,8 +459,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Rubik Dirt", cursive;
 }
 
-@media screen and (max-width: 1600px) {
-  .description__desc_image {
-    width: 10%;
+/*@media (max-width: 1400px) {
+  .desc__text{
+    div{
+      font-size: 6px;
+    }
   }
-}
+}*/
