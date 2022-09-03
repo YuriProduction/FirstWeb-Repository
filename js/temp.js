@@ -1,10 +1,16 @@
-const telephone = document.querySelector('._form3')
-const password = document.querySelector('._form2')
-const login = document.querySelector('._form1')
-
-/*let Scroll = (top)=>{
-    const SelectedForm = document.querySelector('.forms');
-    SelectedForm.scrollIntoView(top);
+const buttons = document.querySelector(".goods__description");
+function Click()
+{
+    console.log("Click");
 }
 
-Scroll(true);*/
+buttons.addEventListener("click",function (event)
+{
+    console.log(event.target)
+    if (event.target.closest('.button'))
+    {
+        Click();
+        console.log(event.target)
+    }
+})
+
