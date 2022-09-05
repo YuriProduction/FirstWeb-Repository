@@ -1,18 +1,21 @@
-console.log("Start");
-const buttons = document.querySelector(".goods__description");
-function Click()
+document.querySelectorAll('.button')
+.forEach(function(obj)
 {
-    console.log("Click");
-}
-
-buttons.addEventListener("click",function (event)
-{
-    console.log(event.target)
-    if (event.target.closest('.button'))
+    obj.addEventListener('click',function()
     {
-        Click();
-        console.log(event.target)
-    }
+        this.style.backgroundColor = "red";
+        this.style.color = "black";
+        setTimeout(()=>{
+            this.style.color = "white";
+            this.style.backgroundColor = "#1e90ff";
+        },200 );
+    })
+})
+const reg = document.getElementById('REGISTRATION');
+reg.addEventListener('click',function()
+{
+    const FormReg = document.getElementById('REGFORM');
+    FormReg.scrollIntoView(false);
 })
 
 
