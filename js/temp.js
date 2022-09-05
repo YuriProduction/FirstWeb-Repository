@@ -1,3 +1,4 @@
+console.log("Start");
 const buttons = document.querySelector(".goods__description");
 function Click()
 {
